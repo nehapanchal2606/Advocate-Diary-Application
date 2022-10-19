@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <form action="/" method="post">
+        {% csrf_token %} 
+        <div class="container advocate">
+            <h1 style="text-align:center ;">ADD CASE</h1>
+        <div class="form-group">
+          <label for="exampleInputEmail1"> First Name</label>
+          <input type="text" class="form-control" name="First_name" id="exampleInputPassword1" aria-describedby="emailHelp" placeholder="First Name">
+          
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Last Name</label>
+          <input type="text" class="form-control" name="Last_name" placeholder="Last Name" id="exampleInputPassword1" >        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Case Number</label>
+            <input type="text" class="form-control" name="case_number" placeholder="Case Number" id="exampleInputPassword1">          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Case Date</label>
+            <input type="date" class="form-control" name="case_Date" placeholder="Case Date" id="exampleInputPassword1">          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Descriptions</label>
+            <input type="text" class="form-control" name="case_des" placeholder="Descriptions" id="exampleInputPassword1">          </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+</body>
+</html>
